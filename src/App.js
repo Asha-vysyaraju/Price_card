@@ -45,7 +45,7 @@ function App() {
   ];
   return (
     <div className="App bg-primary">
-      <div className="container p-5 d-flex justify-content-center align-items-center ">
+      <div className="container p-5 row justify-content-center align-items-center">
         {/* mapping price cards to Card component */}
         {price_cards.map((card, index) => (
           <Card key={index} card={card} />
@@ -58,8 +58,8 @@ function App() {
 // Component for price cards where price_card is passed as props
 function Card({ card }) {
   return (
-    <div className="price_card col-sm-12 col-lg-4">
-      <div class="card p-3 m-2" style={{ width: "20rem" }}>
+    <div className="price_card col-xs-12 col-md-6 col-lg-4">
+      <div class="card p-3 m-5" style={{ width: "20rem" }}>
         <h5 class="card-title text-center fw-bolder">{card.subscription}</h5>
         <h3 class="card-header mb-3 text-center">{card.price}/Month</h3>
         <p class="card-text">{card.user}</p>
